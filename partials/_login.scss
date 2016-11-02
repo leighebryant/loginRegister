@@ -1,0 +1,89 @@
+.formField {
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 400px;
+    border: none;
+    border-bottom: 1px solid #757575;
+
+    &:focus ~ .line:after,
+    &:focus ~ .line:before {
+        width: 50%;
+
+        &:focus ~ .highlight {
+            @include animation(lineAnimation 0.3s ease);
+        }
+    }
+}
+
+.formField:focus ~ label,
+.formField:valid ~ label {
+    top: -20px;
+    font-size: 14px;
+    color: #529c78;
+}
+
+.formField:focus {
+    outline: none;
+}
+
+.formField:focus ~ .highlight {
+    @include animation(inputHighlighter 0.3s ease);
+}
+
+
+
+.line {
+    position: relative;
+    display: block;
+    width: 415px;
+}
+
+.line:after,
+.line:before {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #529c78;
+    @include transition(0.2s ease all);
+}
+
+.line:before {
+    left: 50%;
+}
+
+.line:after {
+    right: 50%;
+}
+
+.formField:focus ~ .line:after,
+.formField:focus ~ .line:before {
+    width: 50%;
+}
+
+.login {
+    background-color: #ffffff;
+    border-radius: 10px;
+    border-top: 2px solid #666666;
+    border-bottom: 2px solid #529c78;
+    margin: 50px auto;
+    padding: 10px 0;
+    position: relative;
+    width: 500px;
+    text-align: center;
+}
+
+.register {
+    display: none;
+    position: relative;
+    margin-bottom: 15px;
+    margin-left: 20px;
+}
+
+.signin {
+    position: relative;
+    margin-bottom: 35px;
+    margin-left: 40px;
+}

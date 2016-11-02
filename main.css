@@ -1,0 +1,118 @@
+.formField {
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 400px;
+  border: none;
+  border-bottom: 1px solid #757575; }
+  .formField:focus ~ .line:after, .formField:focus ~ .line:before {
+    width: 50%; }
+    .formField:focus ~ .line:after:focus ~ .highlight, .formField:focus ~ .line:before:focus ~ .highlight {
+      -webkit-animation: lineAnimation 0.3s ease;
+      -moz-animation: lineAnimation 0.3s ease;
+      animation: lineAnimation 0.3s ease; }
+
+.formField:focus ~ label,
+.formField:valid ~ label {
+  top: -20px;
+  font-size: 14px;
+  color: #529c78; }
+
+.formField:focus {
+  outline: none; }
+
+.formField:focus ~ .highlight {
+  -webkit-animation: inputHighlighter 0.3s ease;
+  -moz-animation: inputHighlighter 0.3s ease;
+  animation: inputHighlighter 0.3s ease; }
+
+.line {
+  position: relative;
+  display: block;
+  width: 415px; }
+
+.line:after,
+.line:before {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #529c78;
+  -webkit-transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  transition: 0.2s ease all; }
+
+.line:before {
+  left: 50%; }
+
+.line:after {
+  right: 50%; }
+
+.formField:focus ~ .line:after,
+.formField:focus ~ .line:before {
+  width: 50%; }
+
+.login {
+  background-color: #ffffff;
+  border-radius: 10px;
+  border-top: 2px solid #666666;
+  border-bottom: 2px solid #529c78;
+  margin: 50px auto;
+  padding: 10px 0;
+  position: relative;
+  width: 500px;
+  text-align: center; }
+
+.register {
+  display: none;
+  position: relative;
+  margin-bottom: 15px;
+  margin-left: 20px; }
+
+.signin {
+  position: relative;
+  margin-bottom: 35px;
+  margin-left: 40px; }
+
+a {
+  text-decoration: none;
+  color: #000000; }
+
+body {
+  background: url("oldmoon.png");
+  font-family: 'Abel', sans-serif; }
+
+button {
+  background-color: #529c78;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: 'Abel', sans-serif;
+  font-size: 20px;
+  margin: 20px auto;
+  padding: 10px;
+  width: 300px; }
+  button:hover {
+    background-color: #85b9a0;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out; }
+
+h1 {
+  text-align: center;
+  font-size: 40px; }
+
+label {
+  color: #999999;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  -webkit-transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  transition: 0.2s ease all; }
+
+/*# sourceMappingURL=main.css.map */
